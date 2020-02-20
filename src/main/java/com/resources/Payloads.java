@@ -35,5 +35,11 @@ public class Payloads
 		m.setLocation(location);
 		return m;
 	}
+	
+	//Delete place method. Here place_id passing as parameter which takes input from add place api
+	public String deleteplaceAPI(String place)
+	{
+		return "{\r\n \"place_id\": \""+place+"\"\r\n}";
+	}
 
 }
