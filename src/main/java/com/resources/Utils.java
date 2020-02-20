@@ -28,9 +28,8 @@ public class Utils
 		if(req==null)
 		{
 		   PrintStream log= new PrintStream(new FileOutputStream("log.txt"));
-		//RestAssured.baseURI="http://2160.10.245.166";
 		   req= new RequestSpecBuilder().setBaseUri(getPropertyValue("baseURL")).
-                addQueryParam("key", "qaclick123").
+                addQueryParam("key", getPropertyValue("key")).
                 addFilter(RequestLoggingFilter.logRequestTo(log)).//It is used to log request
                 addFilter(ResponseLoggingFilter.logResponseTo(log)).//It is used to log response
                 setContentType(ContentType.JSON).build();
