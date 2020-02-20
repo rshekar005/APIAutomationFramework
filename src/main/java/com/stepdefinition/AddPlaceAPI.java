@@ -30,8 +30,8 @@ public class AddPlaceAPI extends Utils
 {
 	RequestSpecification res;
 	Response response;
-	Payloads addplacepayload= new Payloads();
-	String place_id;
+	Payloads payload= new Payloads();
+	static String place_id;
 	//Static Data through pojo
 	/*@Given("Add place payload")
 	public void add_place_payload() throws IOException {
@@ -42,7 +42,7 @@ public class AddPlaceAPI extends Utils
 	//Dynamic Data through feature file
 	@Given("Add place payload with {string} {string} {string}")
 	public void add_place_payload_with(String name, String address, String language) throws IOException {
-		res=given().spec(requestSpecification()).body(addplacepayload.addPlace(name, address, language));
+		res=given().spec(requestSpecification()).body(payload.addPlace(name, address, language));
 		 System.out.println("********************************");
 	}
 
@@ -89,10 +89,12 @@ public class AddPlaceAPI extends Utils
 		user_calls_with_post_http_request(resource, "GET");
 		String name=getResponseValue(response, "name");
 		System.out.println("Name is " +name+ "place is" +place_id);
-		//Assert.assertEquals(string, name);
-		
-	    
+		//Assert.assertEquals(string, name);    
 	}
 	
+	@Given("DeletePlace Payload")
+	public void deleteplace_Payload() throws IOException {
+		res=given().spec(requestSpecification()).body(payload.deleteplaceAPI(place_id));
+	}
 	
 }
