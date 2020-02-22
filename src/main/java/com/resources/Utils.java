@@ -33,9 +33,9 @@ public class Utils
                 addFilter(RequestLoggingFilter.logRequestTo(log)).//It is used to log request
                 addFilter(ResponseLoggingFilter.logResponseTo(log)).//It is used to log response
                 setContentType(ContentType.JSON).build();
-		   System.out.println(req);
 		   return req;
 		}
+		System.out.println(req.toString());
 		return req;
 	}
     
