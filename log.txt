@@ -12,83 +12,17 @@ Multiparts:		<none>
 Body:
 {
     "accuracy": 50,
-    "name": "Shiva",
+    "name": "Nani",
     "phone_number": "871220333",
-    "address": "Gachbowli",
+    "address": "Hyderabad",
     "types": [
         "Kirana Shop",
         "Mutton Shop"
     ],
     "website": "https://Rajashekar",
-    "language": "Telugu",
+    "language": "Marati",
     "location": {
         "lat": -38.383494,
         "lng": 33.427362
     }
-}
-HTTP/1.1 200 OK
-Date: Thu, 13 Feb 2020 06:20:58 GMT
-Server: Apache
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Transfer-Encoding: chunked
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "22f4ad40ac34f5467bfa371945a09d5e",
-    "scope": "APP",
-    "reference": "277b71bbd689969de05b264f7d899e8e277b71bbd689969de05b264f7d899e8e",
-    "id": "277b71bbd689969de05b264f7d899e8e"
-}
-Request method:	POST
-Request URI:	http://216.10.245.166/maps/api/place/add/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "accuracy": 50,
-    "name": "Bharat",
-    "phone_number": "871220333",
-    "address": "Gul Mohar Park",
-    "types": [
-        "Kirana Shop",
-        "Mutton Shop"
-    ],
-    "website": "https://Rajashekar",
-    "language": "Malayalam",
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    }
-}
-HTTP/1.1 200 OK
-Date: Thu, 13 Feb 2020 06:20:58 GMT
-Server: Apache
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Transfer-Encoding: chunked
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "86a62afd1251d349f44982a6dab3ba6d",
-    "scope": "APP",
-    "reference": "cadadd404ec5964b41c41651bf4600fecadadd404ec5964b41c41651bf4600fe",
-    "id": "cadadd404ec5964b41c41651bf4600fe"
 }

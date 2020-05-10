@@ -15,7 +15,8 @@ import io.cucumber.junit.CucumberOptions;
 		//format= {"pretty","html:test-outout", "json:json_output/cucumber.json", "junit:junit_xml/cucumber.xml"}, //to generate different types of reporting(output)
 		monochrome=true,//It will generate a console output in readable format.
 	   // strict=true,//It will fail execution if any pending steps are not there.(Example: If in step definition any test is missed then test execution fails)
-	    dryRun=false
+	    dryRun=false,
+	   tags={"@RegressionTest"}//It will run a scenario which is declared with @AddPlaceAPI in feature file
 )
 public class TestRunner {
 
