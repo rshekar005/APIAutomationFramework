@@ -35,7 +35,7 @@ public class Utils
                 setContentType(ContentType.JSON).build();
 		   return req;
 		}
-		System.out.println(req.toString());
+		System.out.println(req);
 		return req;
 	}
     
