@@ -59,8 +59,8 @@ public class PlaceAPI extends Utils
 		//valueOf method will take resource value and assign it to an oject
 		APINames apiname=APINames.valueOf(resource);
 		//From Enum object we are returning api name
-		System.out.println(apiname.getResourceName());
-	ResponseSpecification resp= new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+		System.out.println("Endpoint is "+apiname.getResourceName());
+	//ResponseSpecification resp= new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
 	if(method.equalsIgnoreCase("POST"))
 		 response =res.when().post(apiname.getResourceName());
 		else if(method.equalsIgnoreCase("GET"))
