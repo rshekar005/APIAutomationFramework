@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Properties;
 
+
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -29,13 +30,14 @@ public class Utils
 		{
 		   PrintStream log= new PrintStream(new FileOutputStream("log.txt"));
 		   req= new RequestSpecBuilder().setBaseUri(getPropertyValue("baseURL")).
+				addFilter(new RequestLoggingFilter(log)).
                 addQueryParam("key", getPropertyValue("key")).
                 addFilter(RequestLoggingFilter.logRequestTo(log)).//It is used to log request
                 addFilter(ResponseLoggingFilter.logResponseTo(log)).//It is used to log response
-                setContentType(ContentType.JSON).build();
+                setContentType(ContentType.JSON).build().log().all();
 		   return req;
 		}
-		System.out.println(req);
+		
 		return req;
 	}
     
@@ -56,4 +58,7 @@ public class Utils
 		JsonPath js= new JsonPath(res);
 		return js.get(key).toString();
 	}
+
+	
+
 }

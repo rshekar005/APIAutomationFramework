@@ -1,8 +1,15 @@
 package com.stepdefinition;
 
+import java.awt.Desktop;
+import java.io.File;
 import java.io.IOException;
 
+
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
+
+
+
 
 // Here this class is used when 1st scenario is independent of second scenario. We can Run Second scenario if first scenario which is in feature file is commented.
 public class Hooks 
@@ -23,5 +30,13 @@ public class Hooks
 		
 		
 	}
+	/*@After
+	public void tearDown() throws IOException
+	{
+		File htmlFile = new File(System.getProperty("user.dir")+"/target/cucumber-reports/advanced-reports/extentreports/extent4.html");
+		Desktop.getDesktop().browse(htmlFile.toURI());
+	}*/
+	
+	
 
 }

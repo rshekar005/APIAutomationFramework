@@ -6,6 +6,7 @@ public enum APINames
 	AddPlaceAPI("/maps/api/place/add/json"),
 	GetPlaceAPI("/maps/api/place/get/json"),
 	DeletePlaceAPI("/maps/api/place/delete/json");
+	
 	public String resource;
 	
 	//resource  will come from feature file(Ex: AddPlaceAPI) and append it to String resource
